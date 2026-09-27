@@ -86,7 +86,7 @@ Follow these steps to run the project locally:
 
 2. If you enter the program, a pricing table will be displayed.
 
-3. The terminal will prompt you to select a vehicle type (Bike or Car) using numeric inputs.
+3. The terminal will prompt you to select a vehicle type (Bike or Car) using inputs.
 
 4. Follow the on-screen prompts to choose the specific vehicle category (e.g., SUV, Premium bike).
 
