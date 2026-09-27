@@ -10,7 +10,7 @@ To run this project from scratch, you will need **Python**, **pip** (Python's pa
 
 ### 1. Installing Git
 
-Git is required to clone the repository to your local machine.r
+Git is required to clone the repository to your local machine
 
 * **Windows:** Download and install from [git-scm.com](https://git-scm.com/download/win?utm_source=gemini).
 
