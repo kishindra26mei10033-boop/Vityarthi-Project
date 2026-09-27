@@ -59,7 +59,7 @@ Follow these steps to run the project locally:
 1. **Clone the repository**:
 
    ```
-   git clone https://github.com/kishindra26mei10033-boop/Vityarthi-Project
+   git clone https://github.com/kishindra26mei10033-boop/Vityarthi-Project.git
    
    ```
 
