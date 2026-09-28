@@ -56,7 +56,7 @@ pip install tabulate
 
 Follow these steps to run the project locally in Command Prompt:
 
-Open Command Prompt
+Open Command Prompt and
 1. **Clone the repository**:
 
    ```
@@ -100,6 +100,10 @@ Open Command Prompt
 8. After the bill is printed, you will be returned to the main menu where you can start a new calculation or exit the application safely.
 
 ## To Safely Clear the Program in Command Prompt 
+
+Open Fresh Command Prompt and 
+
+**clear the program**:
    ```
    rmdir /s /q Vityarthi-Project 
    
