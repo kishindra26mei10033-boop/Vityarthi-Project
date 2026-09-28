@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a command-line application built in Python that calculates the total service cost for different types of vehicles, including Premium Bikes, Normal Bikes, SUVs, and MUVs. The program features an interactive menu that allows users to perform multiple calculations in a single session, select various services, handle invalid inputs gracefully, apply taxes (CGST and SGST), and generate a final itemized invoice.
+This is a command-line interface application built with Python IDLE that calculates the total service cost for different types of vehicles like: Premium Bikes, Normal Bikes, SUVs, and MUVs. The program shows the menu that allows users to perform multiple calculations in a single session, select various services, handle invalid inputs gracefully, apply taxes (CGST and SGST), and generate a final service invoice.
 
 ## Prerequisites & Installation
 
@@ -10,7 +10,7 @@ To run this project from scratch, you will need **Python**, **pip** (Python's pa
 
 ### 1. Installing Git
 
-Git is required to clone the repository to your local machine
+Git is required to clone the repository into your local machine
 
 * **Windows:** Download and install from [git-scm.com](https://git-scm.com/download/).
 
@@ -73,7 +73,7 @@ Open Command Prompt and
    ```
 
 3. **Run the script**:
-   Execute the updated Python file from your terminal:
+   Execute the Python file from your terminal:
 
    ```
    python "Vehicle service cost calculator.py"
@@ -105,6 +105,7 @@ Open Command Prompt and
 Open Fresh Command Prompt and 
 
 **clear the program**:
+
    ```
    rmdir /s /q Vityarthi-Project 
    
