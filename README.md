@@ -56,6 +56,7 @@ pip install tabulate
 
 Follow these steps to run the project locally in Command Prompt:
 
+Open Command Prompt
 1. **Clone the repository**:
 
    ```
