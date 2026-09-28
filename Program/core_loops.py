@@ -1,12 +1,10 @@
-n = 4
-
 # loop of entry
-def loop_service(service):
+def loop_service(service, n_val):
     option = False
     while option is False:
         service = input("\nSelect your Option in numbrs:")
         try:
-            if int(service) <= n and int(service) > 0:
+            if int(service) <= n_val and int(service) > 0:
                 option = True
                 break
             else:
@@ -22,5 +20,5 @@ def print_service(loop):
 2. engine check
 3. oil change
 4. full service""")
-    a = loop_service("2")
+    a = loop_service("2", 4)
     return a
