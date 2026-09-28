@@ -76,7 +76,7 @@ Open Command Prompt and
    Execute the Python file from your terminal:
 
    ```
-   python "Vehicle service cost calculator.py"
+   python "main.py"
    
    ```
 
