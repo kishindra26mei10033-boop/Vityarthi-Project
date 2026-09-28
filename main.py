@@ -1,8 +1,10 @@
-import Program.loops.py
-from Program.loops.py import loop_service, print_service
-from Program.service_cost.py import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
-from Program.multi_service_loops.py import loop_multi_pbike, loop_multi_nbike, loop_multi_SUV, loop_multi_MUV
-from Program.invoicing.py import print_bill
+import Program.loops
+import Program.service_cost
+import Program.multi_service_loops
+from Program.loops import loop_service, print_service
+from Program.service_cost import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
+from Program.multi_service_loops import loop_multi_pbike, loop_multi_nbike, loop_multi_SUV, loop_multi_MUV
+from Program.invoicing import print_bill
 
 print("="*47)
 print(" "*5,"# Vehicle service cost calculator # ")
@@ -40,19 +42,19 @@ while True:
         print("""\n# Vehicle choice
 1. Bike
 2. Car""")
-        Program.core_loops.n=2
-        choice=loop_service("0")
+        Program.loops.n = 2
+        choice = loop_service("0")
 
         # choosing bike type
         if choice == "1":
             print("""\n# Bike type choice
 1. Premium bike
 2. Normal bike""")
-            Program.core_loops.n=2
-            choice1=loop_service("1")
-            Program.core_loops.n=4
-            c=[]
-            temp_c=[] 
+            Program.loops.n = 2
+            choice1 = loop_service("1")
+            Program.loops.n = 4
+            c = []
+            temp_c = []
             
             if choice1 == "1":
                 b=print_service("0")
@@ -80,11 +82,11 @@ while True:
             print("""\n# car type choice
 1. SUV
 2. MUV""")
-            Program.core_loops.n=2
-            choice1=loop_service("1")
-            Program.core_loops.n=4
-            c=[]
-            temp_c=[] 
+            Program.loops.n = 2
+            choice1 = loop_service("1")
+            Program.loops.n = 4
+            c = []
+            temp_c = []
             
             if choice1 == "1":
                 b=print_service("0")
