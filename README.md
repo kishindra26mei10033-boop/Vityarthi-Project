@@ -20,6 +20,7 @@ Git is required to clone the repository into your local machine
 
 Verify Git is installed by running:
 
+open command prompt and paste
 ```
 git --version
 
