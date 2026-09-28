@@ -4,7 +4,7 @@
 Automotive service workshops and independent repair garages frequently experience operational friction and billing discrepancies when calculating maintenance costs manually. Because pricing varies significantly across different vehicle classifications (e.g., standard commuter two-wheelers vs. premium bikes, or multi-utility vehicles vs. sports utility vehicles), relying on verbal estimates or manual entry creates several recurring problems:
 
 - **Pricing Inconsistency & Human Calculation Errors:** Service advisors may miscalculate individual charges or fail to properly compute statutory tax rates.
-- **Double Billing:** Customers who choose bundled packages (e.g., "Full Service") after selecting individual repairs (e.g., "Oil Change", "Brake Service") risk being charged redundant fees without automated package override policies.
+- **Double Billing:** Customers who choose "Full Service" after selecting individual repairs like "Oil Change", "Brake Service", risk being charged redundant fees without automated package override policies.
 - **Lack of Defensive Input Validation:** Simple calculation tools often crash when users provide invalid numerical ranges or non-numeric textual inputs.
 
 The **Vehicle Service Cost Calculator** provides an automated, terminal-based computational engine that enforces consistent rate cards, prevents duplicate item selections, handles bundled service overrides, and computes transparent, tax-compliant invoices.
