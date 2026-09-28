@@ -1,8 +1,8 @@
-import Program.loops
-from Program.loops import loop_service, print_service
-from Program.service_cost import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
-from Program.multi_service_loops import loop_multi_pbike, loop_multi_nbike, loop_multi_SUV, loop_multi_MUV
-from Program.invoicing import print_bill
+import Program.loops.py
+from Program.loops.py import loop_service, print_service
+from Program.service_cost.py import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
+from Program.multi_service_loops.py import loop_multi_pbike, loop_multi_nbike, loop_multi_SUV, loop_multi_MUV
+from Program.invoicing.py import print_bill
 
 print("="*47)
 print(" "*5,"# Vehicle service cost calculator # ")
