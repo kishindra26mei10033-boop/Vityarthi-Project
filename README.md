@@ -54,7 +54,7 @@ pip install tabulate
 
 ## Setup and Execution
 
-Follow these steps to run the project locally:
+Follow these steps to run the project locally in Command Prompt:
 
 1. **Clone the repository**:
 
@@ -97,3 +97,9 @@ Follow these steps to run the project locally:
 7. Once finished, the program will print a final invoice including the subtotal and applicable taxes.
 
 8. After the bill is printed, you will be returned to the main menu where you can start a new calculation or exit the application safely.
+
+## To Safely Clear the Program in Command Prompt 
+   ```
+   rmdir /s /q Vityarthi-Project 
+   
+   ```
