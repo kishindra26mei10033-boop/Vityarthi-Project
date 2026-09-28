@@ -12,7 +12,7 @@ To run this project from scratch, you will need **Python**, **pip** (Python's pa
 
 Git is required to clone the repository to your local machine
 
-* **Windows:** Download and install from [git-scm.com](https://git-scm.com/download/win?utm_source=gemini).
+* **Windows:** Download and install from [git-scm.com](https://git-scm.com/download/).
 
 * **macOS:** Open your terminal and run `xcode-select --install`, or install via Homebrew using `brew install git`.
 
@@ -29,7 +29,8 @@ git --version
 
 You must have Python 3.6 or higher installed. `pip` is usually included automatically when you install Python.
 
-* **Windows & macOS:** Download the official installer from [python.org](https://www.python.org/downloads/?utm_source=gemini). **Important:** During Windows installation, ensure you check the box that says **"Add Python to PATH"**.
+* **Windows & macOS:** Download the official installer from [python.org](https://www.python.org/downloads/).
+* **Important:** During Windows installation, ensure you check the box that says **"Add Python to PATH"**.
 
 * **Linux (Debian/Ubuntu):** Run `sudo apt install python3 python3-pip`.
 
