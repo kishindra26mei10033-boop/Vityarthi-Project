@@ -1,48 +1,33 @@
 # Project Statement: Vehicle Service Cost Calculator
 
 ## 1. Problem Statement
-Automotive service workshops and independent repair garages frequently experience operational friction and billing discrepancies when calculating maintenance costs manually. Because pricing varies significantly across different vehicle classifications (e.g., standard commuter two-wheelers vs. premium bikes, or multi-utility vehicles vs. sports utility vehicles), relying on verbal estimates or manual entry creates several recurring problems:
+Automotive service centers, garage owners, and vehicle mechanics frequently struggle to provide customers with instant, transparent, and itemized billing estimates for vehicle servicing. Customers often face ambiguity regarding individual service rates (such as engine checks, brake repairs, or oil changes) across different vehicle classes (Premium Bikes, Normal Bikes, SUVs, and MUVs). 
 
-- **Pricing Inconsistency & Human Calculation Errors:** Service advisors may miscalculate individual charges or fail to properly compute statutory tax rates.
-- **Double Billing:** Customers who choose "Full Service" after selecting individual repairs like "Oil Change", "Brake Service", risk being charged redundant fees without automated package override policies.
-- **Lack of Defensive Input Validation:** Simple calculation tools often crash when users provide invalid numerical ranges or non-numeric textual inputs.
+Manual calculations are prone to human errors, inconsistent tax evaluations (CGST & SGST application), and slow down the booking intake process. There is a clear need for a lightweight, automated interactive application that handles vehicle categorization, tracks multiple service selections dynamically, applies appropriate price tiers, calculates exact taxes, and generates structured, error-free invoices instantly.
 
-The **Vehicle Service Cost Calculator** provides an automated, terminal-based computational engine that enforces consistent rate cards, prevents duplicate item selections, handles bundled service overrides, and computes transparent, tax-compliant invoices.
+## 2. Scope of the project
+The scope of this project encompasses designing and implementing a modular, interactive terminal-based Vehicle Service Cost Calculator written in Python. 
 
----
+### In-Scope Boundaries:
+* **Vehicle Tier Management:** Providing structured options for two main vehicle groups (Bikes and Cars), further subdivided into specific pricing tiers (Premium Bike, Normal Bike, SUV, MUV).
+* **Dynamic Menu & Multi-Selection Routing:** Presenting a flexible console interface that permits users to select individual services or chain multiple service requirements sequentially.
+* **Smart "Full Service" Override:** Automatically clearing separate minor service costs and replacing them with a flat-rate tier if a customer chooses a full bundle package.
+* **Duplicate Selection Prevention:** Dynamically keeping track of current selections within a user's session to ensure identical services cannot be accidentally added twice.
+* **Taxation & Invoice Structuring:** Automating pricing math by breaking items down into explicit subtotal matrices, calculating precise CGST (9%) and SGST (9%) allocations, and presenting a formatted commercial text invoice.
 
-## 2. Scope of the Project
-
-### In-Scope
-- **Vehicle Classification Support:** Dedicated multi-tier pricing structures for four specific categories: Premium Bikes, Normal Bikes, SUVs, and MUVs.
-- **Service Line Selections:** Standardized options for Brake Service, Engine Check, Oil Change, and Full Service.
-- **Interactive Multi-Service Selection:** Allowing users to add multiple distinct service items within a single billing cycle.
-- **Duplicate Service Suppression:** Active tracking to prevent the identical service from being added more than once.
-- **Package Override Rule:** Automatic clearing of prior individual selections when "Full Service" is chosen, applying consolidated bundle pricing.
-- **Statutory Tax Calculations:** Automated computation of Central GST (CGST @ 9%) and State GST (SGST @ 9%) over the subtotal to generate a final payable invoice.
-- **Defensive Error Handling:** Input validation routines employing `try...except` exception trapping to handle arbitrary string inputs and out-of-range options without program crashes.
-- **Pure Terminal Execution:** Zero GUI dependencies, ensuring 100% command-line compatibility across Linux, macOS, and Windows.
-
-### Out-of-Scope
-- Persistent external database storage (e.g., SQLite/PostgreSQL) for archival storage of past invoices.
-- Graphical User Interface (GUI) or browser-based web frontend.
-- Payment gateway integration or digital card/UPI processing.
-- Dynamic spare parts inventory tracking or labor hour scheduling.
-
----
+### Out-of-Scope (Future Enhancements):
+* Graphical User Interfaces (GUI) or web deployment.
+* Persistent database engines (e.g., SQLite, PostgreSQL) for customer registration historical records.
+* Digital payment processing or inventory stock parts tracking.
 
 ## 3. Target Users
-1. **Automotive Workshop Service Advisors:** Primary operators who interact with customers at service reception desks to quickly determine diagnostic and repair estimates.
-2. **Independent Mechanics & Small Garage Owners:** Small business owners requiring a lightweight, zero-overhead billing tool that runs locally without complex point-of-sale software.
-3. **Vehicle Owners / Customers:** End users seeking transparent, upfront pricing breakdowns and tax visibility before authorizing vehicle maintenance work.
-4. **Academic Evaluators:** Instructors and automated test runners assessing Python programming concepts, structured flow control, function modularity, and input validation.
-
----
+* **Small to Medium Garage Owners & Staff:** Automates and standardizes billing rates for reception desks during vehicle intake.
+* **Vehicle Mechanics:** Allows technicians to quickly evaluate service costs before beginning active maintenance.
+* **Customers / End-Users:** Provides absolute price visibility and clear itemized billing options before approving repairs.
 
 ## 4. High-Level Features
-- **Tabular Rate Grid Presentation:** Utilizes the `tabulate` library to output a clear, aligned pricing matrix for all supported vehicle classes upon program entry.
-- **Structured Multi-Tier Navigation:** Sequential selection hierarchy (Main Menu → Vehicle Choice → Category Choice → Service Requirements).
-- **Session Continuity & Exit Control:** Main application loop allowing continuous billing transactions or clean termination without abrupt interruptions.
-- **Exception-Resilient Prompting:** Centralized validation loop (`loop_service`) that defends against non-integer inputs and boundary violations.
-- **Full Service Package Override Engine:** Intelligent state reset that clears temporary arrays when bundled servicing is selected, ensuring fair and accurate customer billing.
-- **Detailed Itemized Invoice:** Generates a structured bill display detailing individual item charges, subtotal, itemized CGST (9%), SGST (9%), and total charges.
+* **Tiered Pricing Matrix Engine:** Houses predefined pricing profiles across multiple options (Brake Service, Engine Check, Oil Change, Full Service) customized per vehicle category.
+* **Interactive Core Command Loop:** Sanitizes user inputs, validates integer bounds to handle unexpected keyboard faults gracefully, and coordinates application navigation.
+* **Active Session Basket Tracker:** Stores current selected options in memory lists to build multi-item tasks dynamically while checking for repetitive inputs.
+* **Automated Fiscal Calculation System:** Operates precise float conversions for subtotal fees, itemized double tax distributions (18% combined GST), and calculates final gross payable amounts.
+* **Formatted Matrix Presentation Layout:** Leverages structured command-line tables to draw organized, scannable price indexes for a clear user experience.
