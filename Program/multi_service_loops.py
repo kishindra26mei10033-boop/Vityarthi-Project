@@ -1,5 +1,7 @@
-from Program.loops import print_service
-from Program.service_cost import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
+import Program.loops.py
+import Program.service_cost.py
+from Program.loops.py import print_service
+from Program.service_cost.py import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
 import main
 
 # loop for multiple service pbike
