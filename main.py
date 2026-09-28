@@ -1,17 +1,11 @@
-import Program.loops
-import Program.service_cost
-import Program.multi_service_loops
-from Program.loops import loop_service, print_service
-from Program.service_cost import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
+from Program.core_loops import loop_service, print_service
+from Program.cost_calculators import pbike_service_cost, nbike_service_cost, SUV_service_cost, MUV_service_cost
 from Program.multi_service_loops import loop_multi_pbike, loop_multi_nbike, loop_multi_SUV, loop_multi_MUV
 from Program.invoicing import print_bill
 
 print("="*47)
 print(" "*5,"# Vehicle service cost calculator # ")
 print("="*47)
-
-c = []
-temp_c = []
 
 # frontend program
 while True:
@@ -28,51 +22,46 @@ while True:
         # cost table
         from tabulate import tabulate
         data = [
-    ["brake Service",700,300,9000,5000],
-    ["engine check",500,200,3000,1200],
-    ["oil change",1000,400,12000,8000],
-    ["full service",2500,1000,25000,15000]
-]
+            ["brake Service",700,300,9000,5000],
+            ["engine check",500,200,3000,1200],
+            ["oil change",1000,400,12000,8000],
+            ["full service",2500,1000,25000,15000]
+        ]
         headers = ["PRICE","Premium bike","Normal bike","SUV","MUV"]
         print(tabulate(data, headers=headers, tablefmt="grid"))
-
-
         
         # entry of vehicle type
         print("""\n# Vehicle choice
 1. Bike
 2. Car""")
-        Program.loops.n = 2
-        choice = loop_service("0")
+        choice = loop_service("0", 2)
 
         # choosing bike type
         if choice == "1":
             print("""\n# Bike type choice
 1. Premium bike
 2. Normal bike""")
-            Program.loops.n = 2
-            choice1 = loop_service("1")
-            Program.loops.n = 4
+            choice1 = loop_service("1", 2)
             c = []
-            temp_c = []
+            temp_c = [] 
             
             if choice1 == "1":
-                b=print_service("0")
+                b = print_service("0")
                 temp_c.append(b) 
                 c.append(pbike_service_cost(b))
                 if b == "4":
                     print_bill(c)
                 else:
-                    loop_multi_pbike("0", temp_c)
+                    loop_multi_pbike("0", temp_c, c)
                     print_bill(c)
             elif choice1 == "2":
-                b=print_service("0")
+                b = print_service("0")
                 temp_c.append(b) 
                 c.append(nbike_service_cost(b))
                 if b == "4":
                     print_bill(c)
                 else:
-                    loop_multi_nbike("0", temp_c)
+                    loop_multi_nbike("0", temp_c, c)
                     print_bill(c)
             else:
                 print()
@@ -82,29 +71,27 @@ while True:
             print("""\n# car type choice
 1. SUV
 2. MUV""")
-            Program.loops.n = 2
-            choice1 = loop_service("1")
-            Program.loops.n = 4
+            choice1 = loop_service("1", 2)
             c = []
-            temp_c = []
+            temp_c = [] 
             
             if choice1 == "1":
-                b=print_service("0")
+                b = print_service("0")
                 temp_c.append(b) 
                 c.append(SUV_service_cost(b))
                 if b == "4":
                     print_bill(c)
                 else:
-                    loop_multi_SUV("0", temp_c)
+                    loop_multi_SUV("0", temp_c, c)
                     print_bill(c)
             elif choice1 == "2":
-                b=print_service("0")
+                b = print_service("0")
                 temp_c.append(b) 
                 c.append(MUV_service_cost(b))
                 if b == "4":
                     print_bill(c)
                 else:
-                    loop_multi_MUV("0", temp_c)
+                    loop_multi_MUV("0", temp_c, c)
                     print_bill(c)
             else:
                 print()
