@@ -219,7 +219,7 @@ while True:
     program_run = input("Select your option (1 or 2): ").strip()
     
     if program_run == "2":
-        print("\nExiting the Vehicle Service Calculator. Thank you for using the program, Have a great day!")
+        print("\nExiting the Vehicle Service Cost Calculator. Thank you for using the program, Have a great day!")
         break 
     elif program_run == "1":
         # cost table
