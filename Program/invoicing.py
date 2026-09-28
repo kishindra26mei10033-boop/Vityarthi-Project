@@ -1,14 +1,12 @@
-import main
-
 # printing bill
-def print_bill(bill):
+def print_bill(c_list):
     print()
     print("=" * 27)
     print("        INVOICE ITEMS")
     print("-" * 27)
     
     subtotal = 0
-    for price in main.c:
+    for price in c_list:
         print(f"service charge:  {float(price):.2f}")
         subtotal += price
         
