@@ -103,10 +103,12 @@ Open Command Prompt and
 
 ## To Safely Clear the Program in Command Prompt 
 
-Open Fresh Command Prompt and 
-
 **clear the program**:
-
+   ```
+   cd ..
+   
+   ```
+then
    ```
    rmdir /s /q Vityarthi-Project 
    
